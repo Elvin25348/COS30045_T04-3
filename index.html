@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Australian Appliance Energy Data</title>
+
+    <!-- Load existing CSS -->
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation header: keep this -->
+    <header>
+        <div class="header-container">
+            <a href="index.html" title="Return to Home"
+               onclick="loadPage(event, 'index.html', 'link-home')">
+                <img src="logo.png" alt="Power Logo" class="logo">
+            </a>
+
+            <nav>
+                <ul>
+                    <li>
+                        <a id="link-home" href="index.html"
+                           onclick="loadPage(event, 'index.html', 'link-home')"
+                           class="active-link">Home</a>
+                    </li>
+
+                    <li>
+                        <a id="link-televisions" href="televisions.html"
+                           onclick="loadPage(event, 'televisions.html', 'link-televisions')">
+                            Televisions
+                        </a>
+                    </li>
+
+                    <li>
+                        <a id="link-about" href="about.html"
+                           onclick="loadPage(event, 'about.html', 'link-about')">
+                            About Us
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main content for the D3 exercise -->
+    <main>
+        <h1>Appliance Energy Consumption</h1>
+
+        <div id="content"></div>
+
+        <!-- Give the SVG a size so shapes can be seen -->
+        <svg width="300" height="150"></svg>
+    </main>
+
+    <!-- Existing footer: keep this -->
+    <footer>
+        <p>&copy; 2026 Elvin Pui Yung Kit</p>
+        <p>
+            <small>Code and content generated with the assistance of GenAI.</small>
+        </p>
+    </footer>
+
+    <!-- Load D3 before your own D3 code -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="energy-d3.js"></script>
+
+    <!-- Existing navigation JavaScript -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>
